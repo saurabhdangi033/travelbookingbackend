@@ -36,9 +36,7 @@ const { ApolloServerPluginLandingPageGraphQLPlayground } = require('apollo-serve
 const app = express();
 
 // Enable CORS
-app.use(cors({
-  origin: "https://travelbooking-wtvp.vercel.app"  // Allow all origins or specify your frontend URL here
-}));
+app.use(cors());
 
 // MongoDB connection
 mongoose.connect(process.env.MONGODB_URI, {
