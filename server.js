@@ -8,7 +8,6 @@ require('dotenv').config();
 
 const startServer = async () => {
   const app = express();
-
   app.use(cors());
 
   const server = new ApolloServer({ typeDefs, resolvers });
@@ -20,11 +19,6 @@ const startServer = async () => {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
-
-  app.use('/schema', schemaHTTP({
-    bookingSchema,
-    schema: true,
-  }));
 
   app.listen({ port: 4000 }, () =>
     console.log(`Server ready at http://localhost:4000${server.graphqlPath}`)
