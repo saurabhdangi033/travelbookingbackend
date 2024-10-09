@@ -29,7 +29,7 @@
 const { ApolloServer } = require('apollo-server-express');
 const express = require('express');
 const cors = require('cors');  // Add CORS support
-const { typeDefs, resolvers } = require('./schema');
+const { typeDefs, resolvers } = require('./schema/bookingSchema');
 const mongoose = require('mongoose');
 const { ApolloServerPluginLandingPageGraphQLPlayground } = require('apollo-server-core');
 
